@@ -2287,9 +2287,6 @@ void setup_config_box(struct controlbox *b, bool midsession,
     /*
      * The Session panel.
      */
-    str = dupprintf("Basic options for your %s session", appname);
-    ctrl_settitle(b, "Session", str);
-    sfree(str);
 
     if (!midsession) {
         struct hostport *hp = (struct hostport *)
@@ -2397,7 +2394,7 @@ void setup_config_box(struct controlbox *b, bool midsession,
                                 HELPCTX(session_saved),
                                 sessionsaver_handler, P(ssd));
     ssd->listbox->column = 0;
-    ssd->listbox->listbox.height = 7;
+    ssd->listbox->listbox.height = 15;
     if (!midsession) {
         ssd->loadbutton = ctrl_pushbutton(s, "Load", 'l',
                                           HELPCTX(session_saved),

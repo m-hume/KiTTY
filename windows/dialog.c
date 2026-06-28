@@ -772,7 +772,7 @@ static INT_PTR GenericMainDlgProc(HWND hwnd, UINT msg, WPARAM wParam,
              */
             assert(firstpath);   /* config.c must have given us _something_ */
             pds_create_controls(pds, TREE_PANEL, IDCX_PANELBASE,
-                                100, 3, 13, firstpath);
+                                100, 3, 3, firstpath);
             dlg_refresh(NULL, pds->dp);    /* and set up control values */
         }
 
@@ -843,7 +843,7 @@ static INT_PTR GenericMainDlgProc(HWND hwnd, UINT msg, WPARAM wParam,
                 }
             }
             pds_create_controls(pds, TREE_PANEL, IDCX_PANELBASE,
-                                100, 3, 13, (char *)item.lParam);
+                                100, 3, 3, (char *)item.lParam);
 
             dlg_refresh(NULL, pds->dp);    /* set up control values */
 
